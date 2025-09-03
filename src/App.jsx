@@ -4,6 +4,7 @@ import { HashLoader } from "react-spinners"
 import MovieCard from './components/MovieCard.jsx';
 import { useDebounce } from 'react-use';
 import { updateSearchCount } from './appwrite.js';
+import hero from '/hero.png'
 
 const API_BASE_URL = 'https://api.themoviedb.org/3';
 
@@ -74,7 +75,7 @@ const App = () => {
       <div className="pattern" />
       <div className="wrapper">
         <header>
-          <img src="./hero.png" alt="Hero Banner" />
+          <img src={hero} alt="Hero Banner" />
           <h1>Find <span className="text-gradient">Movies</span> You'll Enjoy Easily</h1>
         <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
         </header>
